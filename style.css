@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Ubuntu:wght@500&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    
+}
+body{
+    background-color: black;
+    text-align: center;
+    
+}
+
+/* nav bar */
+
+.button1{
+    border: 0;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+}
+.navbar{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 64px;
+    background: black;
+}
+
+.navbar-overlay{
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+body.open .navbar-overlay{
+    visibility: visible;
+    opacity: 1;
+}
+
+.navbar-berger{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    width: 64px;
+    height: 64px;
+    padding: 0;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.navbar-title{
+    margin: 0;
+    font-size: 16px;
+}
+
+.navbar-menu{
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    translate: -100% 0;
+    width: 270px;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #000;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+body.open .navbar-menu{
+    translate: 0 0;
+    visibility: visible;
+}
+
+.navbar-menu > button.active:hover{
+    color: #B15EFF;
+}
+
+/* content */
+
+
+
+.content{
+    display: flex;
+    height: 70vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    margin-top: 100px;
+}
+.hero{
+    font-size: 1rem;
+}
+
+.button2{
+    width: 150px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #B15EFF;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    
+}
+span{
+    background: #B15EFF;
+    height: 100%;
+    width: 0%;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+    
+}
+.button2:hover span{
+    width: 100%;
+}
+.cartoon-img{
+    height: 200px;
+    border-radius: 50%;
+    opacity: 0.6;
+    padding-bottom: 20px;
+
+}
+.about-container{
+    margin:30px 0;
+    text-align: center;
+}
+.about-me{
+    width: 50%;
+    margin: auto;
+}
+.about-title{
+    padding-bottom: 20px;
+    font-size: 2rem;
+}
+.skills{
+    text-align: center;
+    padding-top: 100px;
+}
+.skill-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width:75%;
+    background-color: #000;
+    gap: 10rem;
+    margin: 100px auto 100px auto;
+}
+.skill-div{
+    background-color: #45474B;
+    border-radius: 10%;
+    
+    box-shadow: 5px 5px 5px #B15EFF;
+}
+.skill-list{
+    list-style: none;
+    margin-top: 20px;
+    }
+.skill-title{
+    margin-top: 20px;
+}
+.skill-li{
+    margin-bottom: 10px;
+}
+.projects {
+    background-color: var(--bg-color);
+    padding: 32px 0;
+    margin-top: 2rem;
+  }
+  
+  .project-pic {
+    width: 100%;
+    height: 50%;
+  }
+  
+  .projects-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    
+  }
+  .project-container p {
+    padding: 0.4rem;
+  }
+  
+  .project-title {
+    margin-bottom: var(--bottom-margin);
+  }
+  
+  .project-details {
+    margin-bottom: var(--bottom-margin);
+  }
+  
+  .project-card {
+    background-color: #45474B;
+    box-shadow: 5px 5px 5px #B15EFF;
+    border-radius: 11px;
+    padding: 20px;
+    margin: 10px;
+    width: 200px;
+  }
+
+  .contact-title{
+    padding: 10px;
+  }
+  .contact-message{
+    padding: 10px 0 50px 0;
+  }
+  
+    
+  .socials {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 1%;
+    bottom: 50%;
+  }
+  
+  .socicon {
+    width: 2rem;
+    height: 2rem;
+  }
+  footer {
+    background-color: var(--bg-color);
+    padding: 1.25rem;
+    text-align: center;
+    margin: 2rem 0 0;
+  }
+
+
+
+@media (max-width: 1350px ){
+    .skill-container{
+        gap: 5rem;
+    }
+
+}
+@media (max-width: 1000px){
+    .skill-container{
+        gap: 20px;
+    }
+}
+@media (max-width:650px){
+    .skill-container{
+        grid-template-columns: 1fr;
+        width: 50%;
+        
+    }
+    .projects-container{
+        flex-direction: column;
+    }
+    .socials{
+        visibility: hidden;
+    }
+}
+    
+
+
+@media only screen and (min-width: 650px){
+    .navbar{
+        justify-content: space-between;
+        padding: 0 0 0 15px;
+    }
+    .navbar-overlay{
+        display: none;
+    }
+    .navbar-berger{
+        display: none;
+    }
+    .navbar-menu{
+        position: static;
+        translate:0 0;
+        width: auto;
+        background: transparent;
+        flex-direction: row;
+        visibility: visible;
+    }
+    .hero{
+        font-size: 3rem;
+    }
+}
